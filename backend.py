@@ -28,7 +28,8 @@ from datetime import datetime as dtime
 import random
 
 app = FastAPI()
-
+# cange to your desired location
+home_path = "~/moodmap-backend"
 
 # Allow requests from all origins
 app.add_middleware(
@@ -41,12 +42,12 @@ app.add_middleware(
 
 templates = Jinja2Templates(directory="templates")
 
-with open("/home/dev/stellapps/jupyter/moov/time_mapping.json", "r") as f:
+with open(f"{home_path}/time_mapping.json", "r") as f:
     TIME_MAPPING = json.load(f)
         
 DAY_MAPPING = {"M": "monday", "T": "tuesday", "W": "wednesday", "R": "thursday", "F": "friday"}
 
-with open("/home/dev/stellapps/jupyter/moov/202302.json", "r") as f:
+with open(f"{home_path}/202302.json", "r") as f:
     DATA = json.load(f)
 
 class UserRegisterRequest(BaseModel):
@@ -355,7 +356,7 @@ def filter_result(generated_text):
 
 
 def generate(user: str):
-    api_key = "AIzaSyDkh0bllzh7qluEX8t4onyE5Bqu1l40w_M"
+    api_key = "" # insert your api here from google gemini
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key={api_key}"
     headers = {"Content-Type": "application/json"}
     data = {
