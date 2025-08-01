@@ -1,5 +1,9 @@
 # MoodMap
 
+
+Our AI scheduling platform is designed with the primary goal of prioritizing student mental health while optimizing their academic performance. Leveraging data from [Georgia Tech's course critique dataset](https://critique.gatech.edu/) for precise class scheduling and [Kaggle's student stress factors dataset](https://www.kaggle.com/datasets/rxnach/student-stress-factors-a-comprehensive-analysis) for understanding stress factors, our tool employs advanced technologies to create efficient schedules tailored to individual preferences.
+
+
 ![image](https://github.com/Biswajit-Banerjee/MoodMap/assets/25904508/e57f51fc-4fe1-4300-9e6f-7a679f14b69a)
 
 
